@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genshin Impact</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./img/favicon-02.svg" type="image/x-icon">
+    <!-- css vendor -->
+     <link rel="stylesheet" href="./assets/css/animate.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <div class="logo wow bounce fadeInDown">
+                <img src="./assets/img/icons/genshin-logo.svg" alt="Logo de Genshin Impact">
+            </div>
+            <ul class="menu-left">
+                <li class="li-focus">
+                    <a href="#start">Inicio</a>
+                </li>
+                <li>
+                    <a href="#characters">Personajes</a>
+                </li>
+                <li>
+                    <a href="#features">Juego</a>
+                </li>
+                <li>
+                    <a href="#gameplayTrailer">Gameplay</a>
+                </li>
+                <li>
+                    <a href="#news-events">Eventos</a>
+                </li>
+            </ul>
+            <ul class="menu-right">
+                <li class="btn-language">
+                    <a href="">
+                        <img src="./assets/img/icons/language-icon.svg" alt="Ícono de Idioma">
+                    </a>
+                </li>
+                <li class="btn-official-page">
+                    <a href="">Página Oficial</a>
+                </li>
+                <li class="btn-cta-container2">
+                    <a href="">
+                        <img src="./assets/img/icons/download-icon-dark.svg" alt="">
+                        <p>Descargar</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="start" class="introduction">
+            <video autoplay muted loop playsinline>
+                <source src="./assets/video/xiao-genshin-impact1920x1080.mp4" type="video/mp4">
+            </video>
+            <div class="introduction-content">
+                <h1>Descubre un mundo de fantasía,<br> magia y aventura.</h1>
+                <p>Únete a la batalla y explora el vasto mundo de Teyvat.</p>    
+            </div>
+            <div class="btn-cta-container">
+                <button class="btn-cta">JUGAR AHORA</button>
+            </div>
+        </section>
+        <section id="characters" class="characters-section section-base">
+            <div class="header-section">
+                <div class="title-section">
+                    <img src="./assets/img/icons/star-title.svg" alt="">
+                    <h2>Elige a tu Héroe</h2>
+                    <img src="./assets/img/icons/stars-title.svg" alt="">   
+                </div>
+                <div class="cta-duo">
+                    <div class="btn-cta-container">
+                        <button class="btn-cta">DESCUBRIR MÁS HÉROES</button>
+                    </div>
+                    <div class="btn-cta-container">
+                        <button class="btn-cta-blue">JUGAR AHORA</button>
+                    </div>
+                </div>
+            </div>
+            <article class="characters-gallery window-base">
+                <div class="gallery-container">
+                    <!-- Botones manejadores -->
+                    <button class="nav-button prev" onclick="prevCharacter()">
+                        <img src="./assets/img/icons/left-arrow.svg" alt="Anterior">
+                    </button>
+                    <!-- Contenedor del personaje -->
+                    <div class="character-display">
+                        <!-- Barra de contraste -->
+                        <div class="contrast-bar" id="contrastBar">
+                            <h3 id="characterName">Shogun Raiden</h3>
+                        </div>
+                        
+                        <!-- Imagen del personaje -->
+                        <img id="characterImg" src="raiden.jpg" alt="Personaje Actual">
+                        
+                        <!-- Información del personaje -->
+                        <div id="characterInfo" class="character-info">
+                            <ul id="characterDetails">
+                                <li>
+                                    <img src="./assets/img/icons/item.svg" alt="" class="icon-item">
+                                    <strong>Constelación:</strong>
+                                    Imperatrix Umbrosa
+                                    <img src="" alt="Constelación" class="icon">
+                                </li>
+                                <li>
+                                    <strong>Poder elemental:</strong> 
+                                    <img src="icons/electro.png" alt="Electro" class="icon">
+                                    Electro ⚡
+                                </li>
+                                <li>
+                                    <strong>Arma:</strong> 
+                                    <img src="icons/spear.png" alt="Lanza" class="icon">
+                                    Lanza
+                                </li>
+                                <li>
+                                    <strong>Rol:</strong> DPS | Sub DPS | Soporte
+                                </li>
+                                <li>
+                                    <strong>Rareza:</strong> 
+                                    <img src="icons/stars.png" alt="Rareza" class="icon">
+                                    
+                                </li>
+                            </ul>
+                            <div class="characterNameBackground"></div>
+                            <p id="characterDesc">
+                                "Con una determinación inquebrantable, empuña el trueno para preservar su visión de la eternidad."
+                            </p>
+                        </div>
+                    </div>
+                <!-- Botón derecho -->
+                <button class="nav-button next" onclick="nextCharacter()">
+                    <img src="./assets/img/icons/right-arrow.svg" alt="Siguiente">
+                </button>
+                </div>
+            </article>
+        </section>
+        <section id="features" class="features-section section-base-bg">
+            <div class="header-section">
+                <div class="title-section">
+                    <img src="./assets/img/icons/white-star-title.svg" alt="">
+                    <h2>Adéntrate en la imponente Teyvat</h2>
+                    <img src="./assets/img/icons/white-stars-title.svg" alt="">   
+                </div>
+                <div class="btn-cta-container">
+                    <button class="btn-cta">JUGAR AHORA</button>
+                </div>
+            </div>
+            <article class="features window-base-bg">
+                <p>Explora, lucha y conecta en un mundo lleno de magia y misterios.</p>
+                <div class="features-cards-container">
+                    <button class="nav-left-arrow">
+                        <img src="./assets/img/icons/left-arrow.svg" alt="">
+                    </button>
+                    <div class="feature-card-one">
+                        <h3>Mundo Abierto</h3>
+                        <p>Viaja por Teyvat y descubre paisajes sorprendentes, desde montañas nevadas hasta cálidos desiertos.</p>
+                    </div>
+                    <div class="feature-card-two">
+                        <h3>Domina los Elementos</h3>
+                        <p>Usa los elementos de la naturaleza para crear estrategias únicas y derrotar a tus enemigos.</p>
+                    </div>
+                    <div class="feature-card-three">
+                        <h3>Sumérgete en la Aventura</h3>
+                        <p>Descubre la historia de los Arcontes, los elementos y el destino de Teyvat.</p>
+                    </div>
+                    <button class="nav-right-arrow">
+                        <img src="./assets/img/icons/right-arrow.svg" alt="">
+                    </button>
+                </div>
+            </article>    
+        </section>
+        <section id="gameplayTrailer" class="gameplay-section section-base-bg">
+            <div class="header-section">
+                <div class="title-section">
+                    <img src="./assets/img/icons/star-title.svg" alt="">
+                    <h2>Descubre el Corazón de la Aventura</h2>
+                    <img src="./assets/img/icons/stars-title.svg" alt="">   
+                </div>
+                <div class="btn-cta-container">
+                    <button class="btn-cta">JUGAR AHORA</button>
+                </div>      
+            </div>
+            <article class="gameplay window-base-bg">
+                <p>Explora paisajes impresionantes, personajes inolvidables y combates épicos en este tráiler exclusivo.</p>
+                <div class="video-container">
+                    <video autoplay controls loop playsinline>
+                        <source src="./assets/video/genshin-impact-official-launch-trailer.mp4" type="video/mp4">
+                        Tu navegador no soporta videos HTML5.
+                    </video>
+                </div>
+                <a href="" class="cta-button">Ver Más Videos</a>
+                </div>
+            </article>
+        </section>
+        <section id="news-events" class="news-events-section section-base-bg">
+            <div class="header-section">
+                <div class="title-section">
+                    <img src="./assets/img/icons/white-star-title.svg" alt="">
+                    <h2>Participa de nuestros eventos</h2>
+                    <img src="./assets/img/icons/white-stars-title.svg" alt="">   
+                </div>
+                <div class="btn-cta-container">
+                    <button class="btn-cta">JUGAR AHORA</button>
+                </div>
+            </div>
+            <article class="news-events window-base-bg">
+                <button class="nav-left-arrow">
+                    <img src="./assets/img/icons/left-arrow.svg" alt="">
+                </button>
+                <div class="news-events-grid">
+                    <div class="image-large"></div>
+                    <div class="event-details">
+                      <h2>¡Participa para ganar hasta 480 Protogemas!</h2>
+                      <p>
+                        <strong>Duración del evento:</strong> del 16 de agosto al 6 de septiembre de 2023 23:59 (UTC +8).<br>
+                        <strong>Canje de recompensas:</strong> del 16 de agosto al 12 de septiembre de 2023 23:59 (UTC +8).</p>
+                    </div>
+                    <div class="image-small"></div>
+                </div>
+                <button class="nav-right-arrow">
+                    <img src="./assets/img/icons/right-arrow.svg" alt="">
+                </button>
+            </article>    
+        </section>
+    </main>
+    <footer>
+        <div class="social-media">
+            <ul>
+                <li class="6">
+                    <a href="">
+                        <img src="./assets/img/icons/discord-icon.svg" alt="ícono de discord" class="social-icon">
+                    </a>
+                </li>
+                <li class="6">
+                    <a href="">
+                        <img src="./assets/img/icons/nintendo-icon.svg" alt="ícono de nintendo switch" class="social-icon">
+                    </a>
+                </li>
+                <li class="6">
+                    <a href="">
+                        <img src="./assets/img/icons/fb-icon.svg" alt="ícono de facebook" class="social-icon">
+                    </a>
+                </li>
+                <li class="6">
+                    <a href="">
+                        <img src="./assets/img/icons/xbox-icon.svg" alt="ícono de xbox" class="social-icon">
+                    </a>
+                </li>
+                <li class="6">
+                    <a href="">
+                        <img src="./assets/img/icons/ps-icon.svg" alt="ícono de playstation" class="social-icon">
+                    </a>
+                </li>
+                <li class="6">
+                    <a href="">
+                        <img src="./assets/img/icons/mobile-icon.svg" alt="ícono de mobile" class="social-icon">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="terms-logo">
+            <img src="./assets/img/icons/genshin-logo-small.png" alt="" class="logo-small">
+            <ul>
+                <li>
+                    <a href="">Política de privacidad</a>
+                </li>
+                <li>
+                    <a href="">Términos de servicio</a>
+                </li>
+                <li>
+                    <a href="">Sobre Nosotros</a>
+                </li>
+                <li>
+                    <a href="">Contáctanos</a>
+                </li>
+                <li>
+                    <a href="">Centro de ayuda</a>
+                </li>
+            </ul>
+            <img src="./assets/img/content-warning.png" alt="Advertencia de contenido: Alcohol y Violencia de fantasía.">
+        </div>
+        <div class="hoyoverse-brand">
+            <img src="./assets/img/icons/hoyoverse-logo-white-footer.png" alt="Logotipo de Hoyoverse.">
+            <p>Copyright © COGNOSPHERE. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!-- js -->
+    <script src="./assets/js/wow.min.js"></script>
+    <script>
+     new WOW().init();
+     </script>
+     <script src="./assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,648 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+p,
+button,
+li{
+    font-family: "Inter", serif;
+}
+h1,
+h2,
+h3,
+h4{
+    font-family: "Ubuntu", serif;
+}
+h1{
+    font-size: 2.5em;
+}
+h2{
+    font-size: 2em;
+}
+h3{
+    font-size: 1.5em;
+}
+h4{
+    font-size: 1.2em;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    background-color: rgb(250,250,250);
+}
+header{
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+button{
+    border-style: none;
+    background-color: rgb(250,250,250);
+    cursor: pointer;
+}
+.section-base {
+    width: 93%;
+    height: 920px;
+    margin: 0;
+    background-color: rgb(250,250,250);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.window-base {
+    height: 78%;
+    border-top: 2px solid rgb(189,170,138);
+    border-right: 2px solid rgb(189,170,138);
+    border-left: 2px solid rgb(189,170,138);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: rgb(250,250,250);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-cta-container{ 
+    padding: 4px 4px;
+    border: 1px solid white;
+}
+    .btn-cta-container .btn-cta{
+        background-color: rgb(189,170,138);
+        padding: 14px 80px;
+        border-style: none;
+        font-family: Inter, serif;
+        font-size: 1.25em;
+        color: rgb(50,49,63);
+        font-weight: 500;
+        cursor: pointer;
+    }
+    .btn-cta-container .btn-cta:hover{
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+/* :::::NAV: Menu::::: */
+.menu{
+    height: 78px;
+    width: 93%;
+    padding: 0 3.5% 0 3.5%;
+    background-color: rgb(50,49,63, 0.8);
+    border: 2px solid rgb(50,49,63,0.7);
+    position: fixed;
+    top: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+    .menu .menu-left,
+    .menu .menu-right{
+        height: 100%;
+        display: flex;
+    }
+    .menu .menu-left{
+        width: 41.6%;
+    }
+        .menu .menu-left li,
+        .menu .menu-right li{
+            display: flex;
+            align-items: center;
+        }
+        .menu .menu-left li{
+            width: 16.6%;  
+            height: 100%;
+        }
+        .li-focus,
+        .menu .menu-left li:hover{
+            background-color: rgb(17,47,102,0.5);
+            border: 1px solid rgb(88,125,230,0.6);
+            border-radius: 1px;
+        }
+            .menu .menu-left li a{
+                color: rgb(250,250,250);
+                width: 100%;
+                padding: 28px 0px;
+                text-align: center;
+                font-size: 1.2;
+            }
+    .menu .menu-right{
+        width: 19.5%;
+        justify-content: space-between;
+        gap: 10px;
+    }
+            .menu .menu-right .btn-language a{
+                width: 40px;
+                height: 40px;
+                border: 1px solid rgb(88,125,230,0.6);
+                border-radius: 20px;
+                background-color: rgb(17,47,102,0.5);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .menu .menu-right .btn-official-page{
+                width: 40.75%;
+                display: flex;
+                justify-content: center;
+            }
+            .menu .menu-right .btn-official-page a{
+                border: 1px solid rgb(88,125,230,0.6);
+                padding: 10px 0px;
+                border-radius: 20px;
+                width: 100%;
+                text-align: center;
+                background-color: rgb(17,47,102,0.5);
+                color: rgb(250,250,250);
+            }
+            .menu .menu-right .btn-cta-container2{
+                width: 42.37%;
+            }
+                .menu .menu-right .btn-cta-container2 a{
+                    border: 1px solid rgb(88,125,230,0.6);
+                    display: flex;
+                    justify-content: center;
+                    gap: 10px;
+                    color: rgb(50,49,63);
+                    background-color: rgb(189,170,138);
+                    padding: 8px 0px;
+                    border-radius: 20px;
+                    width: 100%;
+                }
+/* :::::Termina NAV: Menu::::: */
+
+/* :::::Sección principal: Introduction::::: */
+.introduction{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    .introduction video{
+        position: absolute;
+        min-width: 100%;
+        object-fit: cover;
+        z-index: -10;
+    }
+    .introduction .introduction-content{
+        position: relative;
+        z-index: 10;
+        top: 20.5%;
+        text-align: center;
+        color: white;
+        width: 37.8%;
+    }
+        .introduction .introduction-content h1{
+            font-weight: 450;
+            font-style: italic;
+            line-height: 160%;
+        }
+        .introduction .introduction-content p{
+            font-family: "Ubuntu", serif;
+            font-size: 1.5em;
+            font-weight: 300;
+            font-style: italic;
+            margin-top: 20px;
+        }
+        .introduction .btn-cta-container{
+            position: relative;
+            top: 26.2%;
+        }
+        .introduction .btn-cta-container:hover{
+            position: relative;
+            top: 25.8%;
+            padding: 4px 4px;
+            border: 1px solid rgb(189,170,138);
+        }
+/* :::::Termina Sección principal: Introduction::::: */
+
+/* :::::Sección: Galería de personajes::::: */
+    .header-section{
+        display: flex;
+        align-items: center;
+        gap: 160px;
+        margin-bottom: 8px;
+        align-self: flex-start;
+        margin-left: 3.4%;
+    }
+        .title-section{
+            display: flex;
+            gap: 20px;
+        }
+            .title-section h2{
+                font-style: italic;
+                color: rgb(34,28,108);
+            }
+        .header-section .cta-duo{
+            display: flex;
+        }
+        .btn-cta-container .btn-cta{
+            font-size: 1em;
+        }
+        .btn-cta-container .btn-cta-blue{   
+            background-color: rgb(88,125,230,0.6);
+            padding: 14px 80px;
+            border-style: none;
+            font-family: Inter, serif;
+            font-size: 1em;
+            color: rgb(50,49,63);
+            font-weight: 500;
+            cursor: pointer;
+            font-weight: 400;
+        }
+        .btn-cta-container .btn-cta-blue:hover{
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+.gallery-container {
+    position: relative;
+    width: 73.3%;
+    height: 83.7%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Contenedor principal de personaje */
+.character-display {
+    position: relative;
+    width: 90.10%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* Imagen del personaje */
+    .character-display img {
+        position: relative;
+        z-index: 30; /* Por encima de otros elementos */
+        object-fit: contain;
+        transition: opacity 1s ease-in-out;
+    }
+    .character-display #characterName{
+        transition: opacity 1s ease-in-out;
+    }
+/* Barra de contraste */
+.contrast-bar {
+    position: absolute; /* Posiciona respecto al contenedor padre */
+    bottom: 16%; /* Ajusta la posición vertical */
+    left: 0; /* Inicia desde el borde izquierdo */
+    width: 0%; /* Inicialmente invisible */
+    height: 40px; /* Altura de la barra */
+    background-color: rgba(50, 49, 63); /* Color de fondo */
+    z-index: 20; /* Debajo del nombre y la imagen */
+    transition: width 1s ease-in-out; /* Animación suave */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+    .contrast-bar h3{
+        width: 36%;
+        text-align: center;
+        color: rgb(189,170,138);
+    }
+.characterNameBackground{
+    height: 40px;
+}
+/* Información del personaje */
+.characters-section .header-section{
+    margin-left: 0;
+}
+.character-info {
+    position: absolute;
+    right: 0%;
+    width: 32.4%;
+    height: 570px;
+    background-color: rgb(250,250,250);
+    border: 2px solid rgb(189,170,138);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 0px 20px 20px 20px;
+    z-index: 10;
+    background-image: url('../img/characters/character-info-bg.svg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.character-info p {
+    margin-top: 8px;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.10em;
+    color: rgb(50,49,63);
+    text-align: center;
+    line-height: 160%;
+}
+.character-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 5px 0 0 0;
+    height: 414px;
+    width: 100%;
+}
+.character-info li {
+    width: 381px;
+    font-size: 1em;
+    font-weight: 500;
+    color: rgb(50,49,63);
+    display: flex;
+    align-items: center;
+    min-height: 40px;
+    line-height: 150%;
+    margin-bottom: 16px;
+    justify-content: left;
+}
+.character-info .icon-item{
+    margin-right: 10px;
+}
+.character-info .icon{
+    margin-left: 24px;
+}
+/* Botones manejadores */
+.nav-button {
+    position: absolute;
+    top: 69%;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.nav-button:hover{
+    top: 68%;
+}
+.nav-button img:hover{
+    width: 120%;
+}
+.nav-button.prev {
+    left: 0;
+}
+.nav-button.next {
+    right: 0;
+}
+/* :::::Termina Sección: Galería de personajes::::: */
+
+/* :::::Empieza Sección: Adéntrate en la imponente Teyvat::::: */
+.section-base-bg {
+    width: 100%;
+    height: 920px;
+    margin: 0;
+    background-color: rgb(250,250,250);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+.window-base-bg {
+    width: 93%;
+    height: 78%;
+    border-top: 2px solid rgb(189,170,138);
+    border-right: 2px solid rgb(189,170,138);
+    border-left: 2px solid rgb(189,170,138);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: rgb(250,250,250);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.features-section{
+    background-image: url('../img/backgrounds/forest-background.jpeg');
+    background-repeat: no-repeat;
+}
+    .features-section .header-section{
+        gap: 70px;
+    }
+            .features-section .header-section .title-section h2{
+                color: rgb(250,250,250);
+            }
+        .features-section .features p{
+            align-self: flex-start;
+            font-size: 1.5em;
+            font-style: italic;
+            font-weight: 400;
+            color: rgb(137,137,137);
+            margin: 2% 0 80px 2.4%;
+        }
+        .features-section .features .features-cards-container{
+            width: 74.75%;
+            height: 466px;
+            display: flex;
+            gap: 32px;
+        }
+
+            .features-section .features .features-cards-container .feature-card-one,
+            .features-section .features .features-cards-container .feature-card-two,
+            .features-section .features .features-cards-container .feature-card-three{
+                border: 2px solid white;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                width: 33%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+            }
+                .features-section .features .features-cards-container .feature-card-one h3,
+                .features-section .features .features-cards-container .feature-card-two h3,
+                .features-section .features .features-cards-container .feature-card-three h3{
+                    background-color: rgb(50,49,63,0.9);
+                    color: rgb(250,250,250);
+                    padding: 6px 0;
+                    text-align: center;
+                }
+                .features-section .features .features-cards-container .feature-card-one p,
+                .features-section .features .features-cards-container .feature-card-two p,
+                .features-section .features .features-cards-container .feature-card-three p{
+                    background-color: rgb(50,49,63,0.5);
+                    color: rgb(250,250,250);
+                    padding: 6px 0;
+                    text-align: center;
+                    font-size: 1em;
+                    line-height: 160%;
+                    min-height: 88px;
+                    max-height: 200px;
+                    margin: 8px 8px 16px 8px;
+                }
+                .features-section .features .features-cards-container .feature-card-one{
+                    background-image: url('../img/cards/inazuma-card.jpg');
+                    background-size: cover;
+                    background-position: top;
+                }
+                    
+                .features-section .features .features-cards-container .feature-card-two{
+                    background-image: url('../img/cards/pyro-card.gif');
+                    background-size: cover;
+                    background-position: top;
+                }
+                .features-section .features .features-cards-container .feature-card-three{
+                    background-image: url('../img/cards/sumeru-card.jpg');
+                    background-size: cover;
+                    background-position: top;
+                }
+/* :::::Termina Sección: Adéntrate en la imponente Teyvat::::: */
+
+/* :::::Empieza Sección: Gameplay: Trailer::::: */
+.gameplay-section .header-section{
+    gap: 40px;
+}
+    .gameplay-section .gameplay p{
+        align-self: flex-start;
+        font-size: 1.5em;
+        font-style: italic;
+        font-weight: 400;
+        color: rgb(50,49,63);
+        margin: 2% 0 80px 2.4%;
+    }
+
+    .gameplay {
+        text-align: center;
+        background-color: rgb(88,125,230,0.6);
+        color: #fff;
+    }
+    .video-container {
+        margin: 20px auto;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    .video-container video {
+        width: 100%;
+        height: auto;
+    }
+    .cta-button {
+        font-family: Inter, serif;
+        font-weight: 300;
+        font-size: 0.9em;
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 30px;
+        color: #fff;
+        background: rgb(17,47,102,0.5);
+        border-radius: 1px;
+        text-decoration: none;
+        transition: background 0.3s;
+    }
+    .cta-button:hover {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+/* :::::Termina Sección: Gameplay: Trailer::::: */
+
+/* :::::Empieza Sección: Eventos::::: */
+.news-events-section{
+    background-image: url('../img/backgrounds/background-2.jfif');
+    background-repeat: no-repeat;
+}
+    .news-events-section .header-section .title-section h2{
+        color: rgb(250,250,250);
+    }
+    .news-events-section .window-base-bg{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 32px;
+    }
+    .news-events-grid{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 32px;
+        width: 1184px;
+        height: 513.2px;
+        background-color: rgb(250,250,250);
+    }
+    .image-large {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+        background-color: #dcd2bf;
+        border-radius: 8px;
+        background-image: url('../img/cards/event-two.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    .event-details {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        text-align: center;
+    }
+    .event-details h2 {
+        font-size: 1.8em;
+        color: #808080;
+        margin-bottom: 16px;
+    }
+    .event-details p {
+        font-size: 1em;
+        color: #a0a0a0;
+        line-height: 160%;
+    }
+    .image-small {
+        grid-column: span 1;
+        grid-row: 2 / 3;
+        background-color: #dcd2bf;
+        border-radius: 8px;
+        background-image: url('../img/cards/event-gif.gif');
+        background-size: cover;
+        background-position: center;
+    }
+
+
+
+
+
+
+/* :::::Empieza Footer::::: */
+footer{
+    background-color: #1E1E29;
+    height: 620px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+        .social-media ul{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 700px;
+        }
+    .terms-logo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+        .terms-logo ul{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 686px;
+            margin-bottom: 20px;
+        }
+            .terms-logo ul li a{
+                color: rgb(250,250,250);
+                font-size: 0.875em;
+                font-weight: 300;
+            }
+    .hoyoverse-brand{
+        text-align: center;
+        color: rgb(250,250,250);
+    }
+        .hoyoverse-brand p{
+            font-size: 0.875em;
+            font-weight: 400;
+            margin-top: 20px;
+        }
+/* :::::Termina Footer::::: */
