@@ -827,6 +827,8 @@ footer {
         width: 90%;
         position: relative;
         top: -14vh;
+        background-color: rgba(50, 49, 63, 0.2);
+        padding: 2rem 0;
     }
         .introduction-content h1{
             font-size: 2rem;
@@ -837,7 +839,7 @@ footer {
             padding: 0 2rem;
         }
     .introduction .btn-cta-container {
-        position: relative;
+        top: 6rem!important;
     }
 
   /* ========== GALERÍA PERSONAJES ========== */
