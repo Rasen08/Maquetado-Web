@@ -826,7 +826,7 @@ footer {
     .introduction .introduction-content {
         width: 90%;
         position: relative;
-        top: -16vh;
+        top: -14vh;
     }
         .introduction-content h1{
             font-size: 2rem;
@@ -837,8 +837,7 @@ footer {
             padding: 0 2rem;
         }
     .introduction .btn-cta-container {
-        margin-top: 1.5rem;
-        top: auto;
+        position: relative;
     }
 
   /* ========== GALERÍA PERSONAJES ========== */
@@ -908,7 +907,10 @@ footer {
     /* Mostrar flechas siempre en mobile */
     .nav-button {
         display: block !important;
-        bottom: -4.6vh;
+        bottom: -6.3vh;
+    }
+    .nav-button img:hover{
+        width: 100%;
     }
     .character-info {
         position: absolute;
@@ -940,8 +942,9 @@ footer {
         position: absolute;
     }
     .contrast-bar{
-        bottom: 8vh;
+        bottom: 6vh;
         z-index: 40;
+        height: 3.5rem;
     }
     .contrast-bar h3{
         width: 100%;
@@ -975,6 +978,7 @@ footer {
         color: #5B5B5B;
         margin-bottom: 1rem;
         justify-self: right;
+        margin-right: 1rem;
         gap: 8px;
         font-size: 0.9rem;
     }
