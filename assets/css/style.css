@@ -770,7 +770,7 @@ footer {
 .hamburger {
     display: flex;
 }
-  .items {
+  .menu .items {
     display: none!important;
     flex-direction: column;
     height: fit-content!important;
@@ -781,6 +781,7 @@ footer {
     padding: 1rem 1rem!important;
     text-align: center;
     z-index: 99;
+    gap: 0;
   }
   .items.open {
     display: flex!important;
@@ -808,10 +809,13 @@ footer {
         .menu .items .btn-cta-container2{
             width: 100%;
         }
+        .menu .items .btn-official-page a{
+            margin-bottom: 0.5rem;
+        }
 
   /* ========== INTRODUCCIÓN ========== */
   .introduction {
-    height: 100vh;
+    height: 100vh!important;
     justify-content: center;
   }
     .introduction video{
@@ -822,7 +826,7 @@ footer {
     .introduction .introduction-content {
         width: 90%;
         position: relative;
-        top: -9rem;
+        top: -16vh;
     }
         .introduction-content h1{
             font-size: 2rem;
@@ -928,10 +932,12 @@ footer {
 
     /* Cuando está abierta */
     .character-info.open {
-        max-height: 100%; /* o lo que necesites */
+        max-height: 90vh; /* o lo que necesites */
+        height: fit-content;
         transform: translateY(0);
         pointer-events: auto;
         z-index: 70;
+        position: absolute;
     }
     .contrast-bar{
         bottom: 8vh;
@@ -950,10 +956,10 @@ footer {
     .character-toggle-btn {
         color: #5B5B5B;
         border: 1px solid #5B5B5B;
-        padding: 0.75rem 1rem;
+        padding: 0.5rem 0.8rem;
         margin-top: 1rem;
-        font-size: 1.1rem;
-        font-weight: 600;
+        font-size: 0.9rem;
+        font-weight: 300;
         cursor: pointer;
         border-radius: 0.4rem;
         gap: 8px;
@@ -965,11 +971,12 @@ footer {
 
     .character-toggle-btn.close {
         background-color: #5b5b5b00;
-        font-weight: 400;
+        font-weight: 300;
         color: #5B5B5B;
         margin-bottom: 1rem;
         justify-self: right;
         gap: 8px;
+        font-size: 0.9rem;
     }
 
   /* ========== FEATURES ========== */
