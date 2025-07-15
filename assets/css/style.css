@@ -840,7 +840,13 @@ footer {
     .introduction .btn-cta-container {
         top: 6rem!important;
     }
-
+    .introduction 
+    .btn-cta-container{
+        width: 91%;
+    }
+    .btn-cta{
+        width: 100%;
+    }
   /* ========== GALERÍA PERSONAJES ========== */
   .header-section {
     flex-direction: column;
