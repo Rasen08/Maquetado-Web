@@ -883,10 +883,11 @@ footer {
         height: 130vh!important;
         gap: 2rem;
     }
-    #features{
-        height: 115vh!important;
-    }
-    #new-events{
+
+    #features,
+    #new-events,
+    #gameplayTrailer,
+    #news-events{
         height: 115vh!important;
     }
     #characters .window-base{
@@ -996,6 +997,13 @@ footer {
     }
 
   /* ========== FEATURES ========== */
+  .features-section 
+  .btn-cta-container{
+    width: 91%;
+  }
+    .btn-cta{
+        width: 100%;
+    }
   .features-section .header-section {
     flex-direction: column;
     gap: 1rem;
@@ -1063,9 +1071,16 @@ footer {
   .video-container {
     width: 100%;
   }
+    .gameplay-section 
+    .btn-cta-container{
+        width: 91%;
+    }
 
   /* ========== EVENTOS ========== */
-
+    .news-events-section 
+    .btn-cta-container{
+        width: 91%;
+    }
   .news-events-section .header-section{
     flex-direction: column;
     gap: 1rem;
