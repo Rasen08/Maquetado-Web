@@ -13,44 +13,41 @@
 </head>
 <body>
     <header>
-        <nav class="menu">
-            <div class="logo wow bounce fadeInDown">
-                <img src="./assets/img/icons/genshin-logo.svg" alt="Logo de Genshin Impact">
-            </div>
-            <ul class="menu-left">
-                <li class="li-focus">
-                    <a href="#start">Inicio</a>
-                </li>
-                <li>
-                    <a href="#characters">Personajes</a>
-                </li>
-                <li>
-                    <a href="#features">Juego</a>
-                </li>
-                <li>
-                    <a href="#gameplayTrailer">Gameplay</a>
-                </li>
-                <li>
-                    <a href="#news-events">Eventos</a>
-                </li>
-            </ul>
-            <ul class="menu-right">
-                <li class="btn-language">
-                    <a href="">
-                        <img src="./assets/img/icons/language-icon.svg" alt="Ícono de Idioma">
-                    </a>
-                </li>
-                <li class="btn-official-page">
-                    <a href="">Página Oficial</a>
-                </li>
-                <li class="btn-cta-container2">
-                    <a href="">
-                        <img src="./assets/img/icons/download-icon-dark.svg" alt="">
-                        <p>Descargar</p>
-                    </a>
-                </li>
-            </ul>
-        </nav>
+    <nav class="menu">
+        <div class="logo wow bounce fadeInDown">
+            <img src="./assets/img/icons/genshin-logo.svg" alt="Logo de Genshin Impact">
+        </div>
+
+        <!-- Botón hamburguesa visible solo en mobile -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Menú unificado: sirve para desktop y mobile -->
+        <ul class="items" id="navMenu">
+            <li class="nav-hover li-focus"><a href="#start">Inicio</a></li>
+            <li class="nav-hover"><a href="#characters">Personajes</a></li>
+            <li class="nav-hover"><a href="#features">Juego</a></li>
+            <li class="nav-hover"><a href="#gameplayTrailer">Gameplay</a></li>
+            <li class="nav-hover"><a href="#news-events">Eventos</a></li>
+
+            <!-- Movemos los de menu-right aquí debajo -->
+            <li class="btn-language">
+                <a href=""><img src="./assets/img/icons/language-icon.svg" alt="Ícono de Idioma"></a>
+            </li>
+            <li class="btn-official-page">
+                <a href="">Página Oficial</a>
+            </li>
+            <li class="btn-cta-container2">
+                <a href="">
+                <img src="./assets/img/icons/download-icon-dark.svg" alt="">
+                <p>Descargar</p>
+                </a>
+            </li>
+        </ul>
+    </nav>
     </header>
     <main>
         <section id="start" class="introduction">
@@ -58,7 +55,7 @@
                 <source src="./assets/video/xiao-genshin-impact1920x1080.mp4" type="video/mp4">
             </video>
             <div class="introduction-content">
-                <h1>Descubre un mundo de fantasía,<br> magia y aventura.</h1>
+                <h1>Descubre un mundo de fantasía, magia y aventura.</h1>
                 <p>Únete a la batalla y explora el vasto mundo de Teyvat.</p>    
             </div>
             <div class="btn-cta-container">
@@ -70,7 +67,7 @@
                 <div class="title-section">
                     <img src="./assets/img/icons/star-title.svg" alt="">
                     <h2>Elige a tu Héroe</h2>
-                    <img src="./assets/img/icons/stars-title.svg" alt="">   
+                    <img class="d-none" src="./assets/img/icons/stars-title.svg" alt="">   
                 </div>
                 <div class="cta-duo">
                     <div class="btn-cta-container">
@@ -96,9 +93,13 @@
                         
                         <!-- Imagen del personaje -->
                         <img id="characterImg" src="raiden.jpg" alt="Personaje Actual">
+                        <!-- Solo para mobile -->
+                        <button id="toggleInfoBtn" class="character-toggle-btn">Info <img src="./assets/img/icons/info2.png" alt=""></button>
+
                         
                         <!-- Información del personaje -->
                         <div id="characterInfo" class="character-info">
+                            <button id="closeInfoBtn" class="character-toggle-btn close">Cerrar <img src="./assets/img/icons/close.svg" alt=""></button>
                             <ul id="characterDetails">
                                 <li>
                                     <img src="./assets/img/icons/item.svg" alt="" class="icon-item">
@@ -143,7 +144,7 @@
                 <div class="title-section">
                     <img src="./assets/img/icons/white-star-title.svg" alt="">
                     <h2>Adéntrate en la imponente Teyvat</h2>
-                    <img src="./assets/img/icons/white-stars-title.svg" alt="">   
+                    <img class="d-none" src="./assets/img/icons/white-stars-title.svg" alt="">   
                 </div>
                 <div class="btn-cta-container">
                     <button class="btn-cta">JUGAR AHORA</button>
@@ -153,24 +154,28 @@
                 <p>Explora, lucha y conecta en un mundo lleno de magia y misterios.</p>
                 <div class="features-cards-container">
                     <button class="nav-left-arrow">
-                        <img src="./assets/img/icons/left-arrow.svg" alt="">
+                        <img src="./assets/img/icons/left-arrow.svg" alt="Prev">
                     </button>
-                    <div class="feature-card-one">
-                        <h3>Mundo Abierto</h3>
-                        <p>Viaja por Teyvat y descubre paisajes sorprendentes, desde montañas nevadas hasta cálidos desiertos.</p>
+
+                    <div class="features-cards-inner">
+                        <div class="feature-card-one">
+                            <h3>Mundo Abierto</h3>
+                            <p>Viaja por Teyvat y descubre paisajes sorprendentes, desde montañas nevadas hasta cálidos desiertos.</p>
+                        </div>
+                        <div class="feature-card-two">
+                            <h3>Domina los Elementos</h3>
+                            <p>Usa los elementos de la naturaleza para crear estrategias únicas y derrotar a tus enemigos.</p>
+                        </div>
+                        <div class="feature-card-three">
+                            <h3>Sumérgete en la Aventura</h3>
+                            <p>Descubre la historia de los Arcontes, los elementos y el destino de Teyvat.</p>
+                        </div>
                     </div>
-                    <div class="feature-card-two">
-                        <h3>Domina los Elementos</h3>
-                        <p>Usa los elementos de la naturaleza para crear estrategias únicas y derrotar a tus enemigos.</p>
-                    </div>
-                    <div class="feature-card-three">
-                        <h3>Sumérgete en la Aventura</h3>
-                        <p>Descubre la historia de los Arcontes, los elementos y el destino de Teyvat.</p>
-                    </div>
+
                     <button class="nav-right-arrow">
-                        <img src="./assets/img/icons/right-arrow.svg" alt="">
+                        <img src="./assets/img/icons/right-arrow.svg" alt="Next">
                     </button>
-                </div>
+                    </div>
             </article>    
         </section>
         <section id="gameplayTrailer" class="gameplay-section section-base-bg">
@@ -178,16 +183,16 @@
                 <div class="title-section">
                     <img src="./assets/img/icons/star-title.svg" alt="">
                     <h2>Descubre el Corazón de la Aventura</h2>
-                    <img src="./assets/img/icons/stars-title.svg" alt="">   
+                    <img class="d-none" src="./assets/img/icons/stars-title.svg" alt="">   
                 </div>
                 <div class="btn-cta-container">
                     <button class="btn-cta">JUGAR AHORA</button>
                 </div>      
             </div>
             <article class="gameplay window-base-bg">
-                <p>Explora paisajes impresionantes, personajes inolvidables y combates épicos en este tráiler exclusivo.</p>
+                <p></p>
                 <div class="video-container">
-                    <video autoplay controls loop playsinline>
+                    <video muted controls loop playsinline>
                         <source src="./assets/video/genshin-impact-official-launch-trailer.mp4" type="video/mp4">
                         Tu navegador no soporta videos HTML5.
                     </video>
@@ -201,14 +206,14 @@
                 <div class="title-section">
                     <img src="./assets/img/icons/white-star-title.svg" alt="">
                     <h2>Participa de nuestros eventos</h2>
-                    <img src="./assets/img/icons/white-stars-title.svg" alt="">   
+                    <img class="d-none" src="./assets/img/icons/white-stars-title.svg" alt="">   
                 </div>
                 <div class="btn-cta-container">
                     <button class="btn-cta">JUGAR AHORA</button>
                 </div>
             </div>
             <article class="news-events window-base-bg">
-                <button class="nav-left-arrow">
+                <button class="nav-left">
                     <img src="./assets/img/icons/left-arrow.svg" alt="">
                 </button>
                 <div class="news-events-grid">
@@ -221,7 +226,7 @@
                     </div>
                     <div class="image-small"></div>
                 </div>
-                <button class="nav-right-arrow">
+                <button class="nav-right">
                     <img src="./assets/img/icons/right-arrow.svg" alt="">
                 </button>
             </article>    
