@@ -21,11 +21,7 @@ Su principal objetivo es **demostrar habilidades de maquetado frontend**, diseñ
 - Barra de contraste animada y efectos de fade para transiciones suaves.
 - Sistema de navegación con estado activo (focus).
 
-## 🛠 Tecnologías utilizadas
 
-- HTML5 + CSS3
-- JavaScript (Vanilla)
-- Animaciones CSS personalizadas
 
 ## ✏️ ¿Cómo funciona?
 
@@ -39,12 +35,16 @@ Su principal objetivo es **demostrar habilidades de maquetado frontend**, diseñ
   - Menú hamburguesa que despliega la navegación.
 - Carrusel de features que se controla con flechas y se adapta al tamaño de pantalla.
 
+
+
 ## 🧩 Estructura del proyecto
 
 - **index.html**: estructura principal de la landing page.
 - **characters.js**: lógica de interacciones, animaciones y galería.
 - **/assets/**: splasharts, íconos de personajes y elementos gráficos.
 - **styles.css**: estilos responsivos, animaciones y layout general.
+
+
 
 ## 🚀 Cómo verlo en local
 
@@ -53,10 +53,14 @@ Su principal objetivo es **demostrar habilidades de maquetado frontend**, diseñ
    git clone https://github.com/tu-usuario/nombre-del-repo.git
 2. Abre el archivo index.html en tu navegador preferido.
 
+
+
 ## 🎨 Prototipo en Figma
 
 Si querés conocer la estructura y diseño previo:
 👉 Ver prototipo en Figma: https://www.figma.com/design/fOrQfHVMtGZvaKhOos0sJg/Prototipo---MyDW-Final?node-id=0-1&t=YunnMLFnWIXEoY9W-1
+
+
 
 ## ✨ Posibles mejoras futuras
 
@@ -67,9 +71,13 @@ Si querés conocer la estructura y diseño previo:
 - Añadir transiciones más suaves y microinteracciones.
 - Implementar backend para gestionar el contenido dinámicamente.
 
+
+
 ## 🤝 Créditos
 
 - Desarrollado con ❤️ como práctica de frontend y homenaje creativo al juego Genshin Impact.
 Por [Rasen].
 Iconografía, nombres y personajes son propiedad de HoYoverse.
+
+
 
